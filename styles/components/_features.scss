@@ -1,0 +1,75 @@
+
+.feature-selector {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    padding: 4rem 0 0rem 0;
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+        flex-flow: column nowrap;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+
+    li {
+        list-style: none;
+        width: 33%;
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid rgba(0,0,0,0.3);
+        text-align: center;
+
+        @include respond(phone) {
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .active-feature {
+    border-bottom: 0.4rem solid var(--color-soft-red);
+    text-transform: bold;
+    font-size: 1.4rem;
+
+        &:hover {
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+.feature-display {
+    padding: 4rem 0;
+
+    .illustration-box {
+        
+        @include respond(tab) {
+            text-align: center;
+            padding-bottom: 6rem;
+        }
+
+        @include respond(phone) {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .feature-text {
+        width: 80%;
+        padding-left: 2rem;
+        margin: auto;
+
+        @include respond(tab) {
+            text-align: center;
+            width: 70%;
+        }
+    }
+}

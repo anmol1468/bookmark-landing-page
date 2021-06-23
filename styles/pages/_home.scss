@@ -1,0 +1,78 @@
+.header {
+height: auto;
+overflow-x: hidden;
+
+@include respond(tab) {
+    height: auto;
+    width: 100vw;
+}
+
+    .grid {
+        padding: 6rem 0;
+    }
+
+    .main {
+
+        &__text {
+            
+            @include respond(tab) {
+                grid-row-start: 2;
+                align-self: center;
+                text-align: center;
+                width: 75%;
+                padding-top: 3rem;
+                margin: auto;
+            }
+
+            @include respond(phone) {
+                width: 88%;
+            }
+        }
+
+        .btn {
+            margin-right: 1.5rem;
+        }
+
+        &__illustration {
+            
+            img {
+                width: 115%;
+
+                @include respond(tab) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.section-features {
+    padding-top: 7rem;
+
+    @include respond(tab) { padding-top: 6rem;}
+    @include respond(phone) { padding-top: 4rem;}
+}
+
+.section-download {
+    padding-top: 10rem;
+
+    @include respond(tab) {
+        padding-top: 7rem;
+    }
+}
+
+.section-questions {
+    padding-top: 6rem;
+
+    @include respond(tab) {
+        padding-top: 4rem;
+    }
+}
+
+.section-contact {
+    margin-top: 16rem;
+    background-color: var(--color-soft-blue);
+    height: auto;
+    padding-bottom: 1.1rem;
+}
+

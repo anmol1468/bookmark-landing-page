@@ -1,0 +1,49 @@
+#extension-1 {
+    grid-row: 1 / span 8;
+
+    @include respond(phone) {
+        grid-row: 1 / 2;
+    }
+}
+#extension-2 {
+    grid-row: 2 / span 8;
+
+    @include respond(phone) {
+        grid-row: 2 / 3;
+    }
+}
+#extension-3 {
+    grid-row: 3 / span 8;
+
+    @include respond(phone) {
+        grid-row: 3 / 4;
+    }
+}
+
+.extension {
+    background-color: rgb(251, 251, 251);
+    margin: 0 2rem;
+    padding: 2rem 0rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.3);
+
+    @include respond(phone) {
+        width: 75%;
+        margin: auto;
+    }
+
+    p {
+        padding-bottom: 3rem;
+        border-bottom: 3px dotted rgba(0,0,0,0.1);
+
+        @include respond(phone) {
+            padding-bottom: 4.5rem;
+        }
+    }
+    .btn {
+        margin: 2.5rem 0 1rem 0;
+
+        @include respond(phone) {
+            margin: 3rem 0 1.5rem 0;
+        }
+    }
+}

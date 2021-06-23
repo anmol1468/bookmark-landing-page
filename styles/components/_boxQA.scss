@@ -1,0 +1,68 @@
+.boxQA {
+    margin: auto;
+    width: 60%;
+
+    @include respond(tab) {
+        width: 75%;
+    }
+
+    @include respond(phone) {
+        width: 88%;
+    }
+
+    .btn {
+        margin: 3rem 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    li {
+        list-style: none;
+        border-bottom: 0.2rem solid rgba(0,0,0,0.05);
+
+        &:first-child {
+            border-top: 0.2rem solid rgba(0,0,0,0.05);
+        }
+
+        .question {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            cursor: pointer;
+            align-items: center;
+            padding: 2rem 1rem 1rem 0.5rem;
+            font-size: 2rem;
+
+            a {font-size: 1.5rem;}
+
+            i {
+                transition: all 0.2s;
+
+                &:hover {
+                    color: var(--color-soft-red);
+                }
+            }
+
+            i.active-i {
+                transform: rotateZ(180deg);
+                color: var(--color-soft-red);
+            }
+        }
+
+        .answer {
+            overflow: hidden;
+            max-height: 0;
+            padding: 0;
+            transition: all 0.4s;
+        }
+
+        .active-answer {
+            padding: 1.5rem 0;
+            max-height: 20rem;
+            
+        }
+    }
+}
+

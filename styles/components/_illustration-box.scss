@@ -1,0 +1,46 @@
+.illustration-box {
+    position: relative;
+
+
+    &__back {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        z-index: -1;
+        border-radius: 100rem 0 0 100rem;
+        height: 27rem;
+        width: 65rem;
+        background-color: var(--color-soft-blue);
+
+        @include respond(tab) {
+            height: 70%;
+            top: 30%;
+        }
+
+    &--left  {
+        position: absolute;
+        top: 40%;
+        right: 25%;
+        z-index: -1;
+        border-radius: 0 100rem 100rem 0;
+        height: 27rem;
+        width: 65rem;
+        background-color: var(--color-soft-blue);
+
+        @include respond(tab) {
+            height: 70%;
+            top: 25%;
+            right: 45%;
+        }
+
+        img {
+            width: 100vw;
+
+            @include respond(tab) {
+                margin: auto;
+            }
+        }
+    }
+
+    }
+}
